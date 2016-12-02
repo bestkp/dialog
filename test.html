@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test my dialog</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="dialog.css">
+</head>
+<body style="height: 1000px">
+    <button id="alert">alert</button>
+    <button id="confirm">confirm</button>
+<script src="jquery-1.11.3.min.js"></script>
+<script src="dialog.js"></script>
+<script>
+    $('#alert').click(function () {
+        $.dialog({
+            height: 200,
+            type: 2,
+            okFunc: function () {
+                $.dialog({
+                    content: '你点击了ok'
+                });
+            },
+            noFunc: function () {
+                alert(1);
+            }
+        });
+    });
+    $('#confirm').click(function () {
+        $.dialog({
+            height: 200,
+            type: 1,
+            okFunc: function () {
+                $.dialog({
+                    content: '你点击了ok'
+                });
+            },
+            noFunc: function () {
+                $.dialog({
+                    content: '你点击了cancle'
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>
