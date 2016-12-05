@@ -64,12 +64,13 @@
 }
 #kpMask #dialog .dialog-top .dialog-close {
     position: absolute;
-    right: 0;
-    top: 0;
-    /*background: cadetblue;*/
+    right: -1px;
+    top: -1px;
     padding: 0 15px;
     cursor: default;
+    height: 41px;
 }
 #kpMask #dialog .dialog-top .dialog-close:hover {
     background: cadetblue;
+    color: #fff;
 }
