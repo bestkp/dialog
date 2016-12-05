@@ -66,20 +66,22 @@
         this.mask = $('#kpMask');
         this.dialog = this.mask.find('#dialog');
         this.content = this.dialog.find('.dialog-content');
+        var scrollTop = $(window).scrollTop();
         this.mask.css({
             width: winW,
-            height: winH
+            height: winH,
+            top: scrollTop
         });
         this.dialog.css({
             width: this.opts.width,
             height: this.opts.height,
             marginLeft: -this.opts.width/2,
-            marginTop: -this.opts.height/2,
+            marginTop: -this.opts.height/2
         });
         this.content.css({
             height: this.opts.height - 130
         })
-    }
+    };
     Dialog.prototype.alert = function () {
         this.mask.show();
     };
